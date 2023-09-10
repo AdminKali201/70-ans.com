@@ -1,0 +1,519 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: whitesmoke;
+	overflow-x: hidden;
+}
+
+header {
+	display: flex;
+	justify-content:space-around;
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+	top: 0px;
+	background-image: url(/images/header2.png);
+	transition: background 0.4s ease-in-out;
+}
+header.sticky {
+	display: flex;
+	justify-content:space-around;
+	width: 80rem;
+	position: fixed;
+	z-index: 1;
+	margin-left: 20rem;
+	top: 5px;
+	border-radius: 10px;
+	background-image: url(/images/header\ image.png);
+ }
+header img {
+	height: 70px;
+}
+ header nav a {
+	display: inline-block;
+	position: relative;
+	padding: 10px;
+	margin-top: 15px;
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+	text-transform: uppercase;
+	transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+	transition-duration: 400ms;
+	transition-property: color;
+	transition: color 0.4s ease-in-out;
+ }
+ header.sticky nav a {
+	color: whitesmoke;
+ }
+ header nav a:focus,
+ header nav a:hover{ 
+   color: goldenrod;
+ }
+ header nav a:focus::after,
+ header nav a:hover::after{
+    left: 0%;
+    width: 100%;
+ }
+ header nav a::after{
+	content: "";
+	pointer-events: none;
+	bottom: -2px;
+	left: 50%;
+	position: absolute;
+	width: 0%;
+	height: 2px;
+	background-color: goldenrod;
+	transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+	transition-duration: 400ms;
+	transition-property: width, left;
+ }
+ header.sticky nav a:focus,
+ header.sticky nav a:hover{ 
+   color: goldenrod;
+ }
+ header.sticky nav a:focus::after,
+ header.sticky nav a:hover::after{
+    left: 0%;
+    width: 100%;
+ }
+ header.sticky nav a::after{
+	content: "";
+	pointer-events: none;
+	bottom: -2px;
+	left: 50%;
+	position: absolute;
+	width: 0%;
+	height: 2px;
+	background-color: goldenrod;
+	transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+	transition-duration: 400ms;
+	transition-property: width, left;
+ }
+
+.grid1 {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+}
+
+ .contact-info {
+	  display: flex;
+    flex-direction: column;
+    margin: 10rem;
+  }
+
+  .spans-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .coments-info1 {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+  }
+  .contact-info h1 {
+    font-size: 45px;
+    color: goldenrod;
+  }
+  .contact-info p{
+	font-family: 'philosopher';
+	display: grid;
+	grid-template-rows: 25px 25px 25px;
+	margin-top: 2rem;
+  }
+  .contact-info img{
+	height: 80px;
+	display: grid;
+	grid-template-rows: 25px 25px 25px;
+  }
+  .social-media {
+	position: absolute;
+	margin: 1rem 6rem;
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
+  }
+  .social-media a{
+	text-decoration: none;
+	font-size: 30px;
+  }
+  .fa-facebook {
+	color: #1E7CF2;
+  }
+  .fa-instagram{
+	color: #E3283C;
+  }
+  .fa-twitter{
+	color: #24A4F2;
+  }
+  .fa-linkdeen{
+	color: #087BB7;
+  }
+
+
+  .card {
+    margin: 12rem 4rem;
+  }
+  .group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+   }
+   .name {
+    border: solid 1.5px #1A1A1A;
+    border-radius: 1rem;
+    background: none;
+    padding: 1rem;
+    font-size: 1rem;
+    color: black;
+    transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+	  width: 30rem;
+   }
+   
+   .name-label {
+    position: absolute;
+    left: 15px;
+    color: #1A1A1A;
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: 150ms cubic-bezier(0.4,0,0.2,1);
+   }
+   
+   .name:focus, .name:valid {
+    outline: none;
+    border: 1.5px solid  goldenrod;
+   }
+   
+   .name:focus ~ .name-label, .name:valid ~ .name-label {
+    transform: translateY(-50%) scale(0.8);
+    background-color: whitesmoke;
+    padding: 0 .2em;
+    color: goldenrod;
+   }
+
+   .subject {
+    border: solid 1.5px #1A1A1A;
+    border-radius: 1rem;
+    background: none;
+    padding: 1rem;
+    font-size: 1rem;
+    color: black;
+    transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+	  width: 30rem;
+   }
+   
+   .subject-label {
+    position: absolute;
+    left: 15px;
+    color: #1A1A1A;
+    pointer-events: none;
+    transform: translateY(6.3rem);
+    transition: 150ms cubic-bezier(0.4,0,0.2,1);
+   }
+   
+   .subject:focus, .subject:valid {
+    outline: none;
+    border: 1.5px solid  goldenrod;
+   }
+   
+   .subject:focus ~ .subject-label, .subject:valid ~ .subject-label {
+    transform: translateY(295%) scale(0.8);
+    background-color: whitesmoke;
+    padding: 0.2em;
+    color: goldenrod;
+   }
+   .email {
+    border: solid 1.5px #1A1A1A;
+    border-radius: 1rem;
+    background: none;
+    padding: 1rem;
+    font-size: 1rem;
+    color: black;
+    transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+	  width: 30rem;
+   }
+   
+   .email-label {
+    position: absolute;
+    left: 15px;
+    color: #1A1A1A;
+    pointer-events: none;
+    transform: translateY(11.5rem);
+    transition: 150ms cubic-bezier(0.4,0,0.2,1);
+   }
+   
+   .email:focus, .email:valid {
+    outline: none;
+    border: 1.5px solid  goldenrod;
+   }
+   
+   .email:focus ~ .email-label, .email:valid ~ .email-label {
+    transform: translateY(650%) scale(0.8);
+    background-color: whitesmoke;
+    padding: 0.2em;
+    color: goldenrod;
+   }
+   .phone {
+    border: solid 1.5px #1A1A1A;
+    border-radius: 1rem;
+    background: none;
+    padding: 1rem;
+    font-size: 1rem;
+    color: black;
+    transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+	  width: 30rem;
+   }
+   
+   .phone-label {
+    position: absolute;
+    left: 15px;
+    color: #1A1A1A;
+    pointer-events: none;
+    transform: translateY(16.8rem);
+    transition: 150ms cubic-bezier(0.4,0,0.2,1);
+   }
+   
+   .phone:focus, .phone:valid {
+    outline: none;
+    border: 1.5px solid  goldenrod;
+   }
+   
+   .phone:focus ~ .phone-label, .phone:valid ~ .phone-label {
+    transform: translateY(987%) scale(0.8);
+    background-color: whitesmoke;
+    padding: 0.2em;
+    color: goldenrod;
+   }
+   .message {
+    border: solid 1.5px #1A1A1A;
+    border-radius: 1rem;
+    background: none;
+    padding: 1rem;
+    font-size: 1rem;
+    color: black;
+    transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+	  width: 30rem;
+   }
+   
+   .message-label {
+    position: absolute;
+    left: 15px;
+    color: #1A1A1A;
+    pointer-events: none;
+    transform: translateY(22.5rem);
+    transition: 150ms cubic-bezier(0.4,0,0.2,1);
+   }
+   
+   .message:focus, .message:valid {
+    outline: none;
+    border: 1.5px solid  goldenrod;
+   }
+   
+   .message:focus ~ .message-label, .message:valid ~ .message-label {
+    transform: translateY(1330%) scale(0.8);
+    background-color: whitesmoke;
+    padding: 0.2em;
+    color: goldenrod;
+   }
+   .send {
+    appearance: none;
+    background-color: #1A1A1A;
+    border: 0.125em solid #1A1A1A;
+    border-radius: 0.9375em;
+    box-sizing: border-box;
+    color: whitesmoke;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 2rem;
+    min-height: 3.75em;
+    min-width: 0;
+    outline: none;
+    padding: 1em 2.3em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+   }
+   
+   .send:disabled {
+    pointer-events: none;
+   }
+   
+   .send:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+   }
+   
+   .send:active {
+    box-shadow: none;
+    transform: translateY(0);
+   }
+
+   .mapp{
+    width: 1650px;
+    height: 600px;
+    top: -15rem;
+    transition: all 0.2s;
+    position: relative;
+    margin: 10rem 7rem;
+  }
+  
+  .mapp-inner {
+    width: inherit;
+    height: inherit;
+    background: rgba(255,255,255,.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+  }
+  
+  .circle3 {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient( yellow, goldenrod);
+    border-radius: 50%;
+    position: absolute;
+    animation: move-up6 1s ease-in infinite alternate-reverse;
+  }
+    
+  .circle3:nth-child(1) {
+    top: -25px;
+    left: -25px;
+  }
+    
+  .circle3:nth-child(2) {
+    bottom: -25px;
+    right: -25px;
+    animation-name: move-down1;
+  }
+    
+    @keyframes move-up6 {
+    to {
+      transform: translateY(-10px);
+    }
+    }
+    
+    @keyframes move-down1 {
+    to {
+      transform: translateY(10px);
+    }
+  }
+
+  .mapouter {
+    margin: -35rem 11rem;
+  }
+
+  footer {
+    width: 1650px;
+    height: 700px;
+    margin: -10rem 9rem;
+    margin-bottom: 5rem;
+    position: relative;
+    }
+    .footer-inner1 {
+    width: inherit;
+    height: inherit;
+    background: rgba(255,255,255,.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    background-color: #dcde0a;
+    background-image: linear-gradient(43deg, #dcde0a 0%, #c8c550 46%, #d68601 100%);
+    }
+    .footer1{
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    gap: 10rem;
+    top: 6rem;
+    }
+    .footer2{
+    position: absolute;
+    }
+  
+    .mini-footer1{
+    display: flex;
+    flex-direction: column;
+    }
+    .mini-footer1 img {
+    height: 40rem;
+    width: 40rem;
+    margin: -6.5rem auto;
+    }
+    .mini-footer1 p {
+    font-size: 30px;
+    margin: -1rem 11rem;
+    font-weight: bold;
+    font-family: 'philosophi';
+    }
+    .mini-footer2 ul{
+    display: grid;
+    grid-template-rows: 100px 100px 100px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'philosopher';
+    margin: 3rem -1rem;
+    }
+    .mini-footer2 ul a{
+    text-decoration: none;
+    color: black;
+    }
+    .mini-footer3{
+    margin-right: 5rem;
+    }
+    .mini-footer3 p{
+    font-family: 'philosopher';
+    display: grid;
+    grid-template-rows: 25px 25px 25px;
+    margin-top: 2rem;
+    }
+    .mini-footer3 img{
+    height: 80px;
+    display: grid;
+    grid-template-rows: 25px 25px 25px;
+    }
+    .coments-footer1 {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    }
+    .mini-footer4{
+    position: absolute;
+    font-weight: bold;
+    margin: -9rem 9rem;
+    }
+    .mini-footer5 {
+    position: absolute;
+    margin: -6rem 49.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    }
+    .mini-footer5 a{
+    text-decoration: none;
+    font-size: 30px;
+    }
+    .fa-facebook {
+    color: #1E7CF2;
+    }
+    .fa-instagram{
+    color: #E3283C;
+    }
+    .fa-twitter{
+    color: #24A4F2;
+    }
+    .fa-linkdeen{
+    color: #087BB7;
+    }
+
